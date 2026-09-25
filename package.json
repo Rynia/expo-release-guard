@@ -1,0 +1,35 @@
+{
+  "name": "expo-release-guard",
+  "version": "1.0.0",
+  "description": "Pre-flight store safety, privacy manifest & release readiness CLI for Expo & React Native apps.",
+  "main": "dist/runner.js",
+  "bin": {
+    "expo-release-guard": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node bin/cli.js"
+  },
+  "keywords": [
+    "expo",
+    "react-native",
+    "app-store",
+    "google-play",
+    "privacy-manifest",
+    "eas-build",
+    "cli",
+    "release-engineering",
+    "pre-flight",
+    "ci"
+  ],
+  "author": "Muharrem Özmen (@Rynia) <ryniastudios@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rynia/expo-release-guard.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rynia/expo-release-guard/issues"
+  },
+  "homepage": "https://github.com/Rynia/expo-release-guard#readme"
+}
