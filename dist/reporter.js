@@ -43,10 +43,12 @@ function printTerminalReport(report) {
     const scoreBadge = scoreColor((0, colors_1.bold)(` ${report.score}/10 `));
     if (!report.hasFailures) {
         console.log(`🎉 ${(0, colors_1.bold)('STORE READINESS SCORE:')} ${scoreBadge} — ${(0, colors_1.green)('READY FOR APP STORE & GOOGLE PLAY!')}`);
+        console.log((0, colors_1.dim)('\n⭐ Saved an EAS build cycle? Star the repo on GitHub:'));
+        console.log((0, colors_1.cyan)('   https://github.com/Rynia/expo-release-guard\n'));
     }
     else {
         console.log(`🚨 ${(0, colors_1.bold)('STORE READINESS SCORE:')} ${scoreBadge} — ${(0, colors_1.red)('CRITICAL REJECTION RISKS DETECTED!')}`);
-        console.log((0, colors_1.dim)('Resolve all failing checks above before submitting builds to EAS.'));
+        console.log((0, colors_1.dim)('Resolve all failing checks above before submitting builds to EAS.\n'));
     }
     console.log(line + '\n');
 }

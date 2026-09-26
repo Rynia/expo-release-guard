@@ -50,9 +50,11 @@ export function printTerminalReport(report: ReleaseReport): void {
 
   if (!report.hasFailures) {
     console.log(`🎉 ${bold('STORE READINESS SCORE:')} ${scoreBadge} — ${green('READY FOR APP STORE & GOOGLE PLAY!')}`);
+    console.log(dim('\n⭐ Saved an EAS build cycle? Star the repo on GitHub:'));
+    console.log(cyan('   https://github.com/Rynia/expo-release-guard\n'));
   } else {
     console.log(`🚨 ${bold('STORE READINESS SCORE:')} ${scoreBadge} — ${red('CRITICAL REJECTION RISKS DETECTED!')}`);
-    console.log(dim('Resolve all failing checks above before submitting builds to EAS.'));
+    console.log(dim('Resolve all failing checks above before submitting builds to EAS.\n'));
   }
   console.log(line + '\n');
 }

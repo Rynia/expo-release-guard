@@ -1,5 +1,10 @@
 # 🛡️ expo-release-guard
-### *Pre-flight store safety, privacy manifest & release readiness CLI for Expo & React Native apps.*
+### Catch Expo release blockers in 3 seconds before EAS does.
+**Locally audits Apple Privacy Manifests (`ITMS-91053`), Android `versionCode`, permissions & EAS profiles before store submission.**
+
+```bash
+npx expo-release-guard
+```
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License" />
@@ -8,6 +13,8 @@
   <img src="https://img.shields.io/badge/Google_Play_Compliance-Audited-34D399?style=for-the-badge&logo=googleplay&logoColor=white" alt="Google Play" />
   <img src="https://img.shields.io/badge/Dependencies-0-success?style=for-the-badge" alt="Zero Dependencies" />
 </p>
+
+> ⭐ **Star this repo so it's in your developer toolbox before your next EAS build.**
 
 ---
 
@@ -47,6 +54,13 @@ Submitting an Expo build to EAS takes **30–45 minutes in cloud queues**, only 
 * 🚨 **Exposed Secrets in Public Bundles:** Accidentally declaring private API keys under `EXPO_PUBLIC_*` leaks credentials in client APK/IPA binaries.
 
 **`expo-release-guard` audits all of this locally in less than 3 seconds before you push to EAS.**
+
+---
+
+## ⚖️ What It Doesn't Do
+
+* **It won't automatically rewrite your code or fix native bugs:** You remain in control of your configuration.
+* **It catches the 10 most common App Store and Google Play rejection causes:** The exact configuration mismatches and missing manifests that waste 30-minute EAS cloud build cycles.
 
 ---
 
